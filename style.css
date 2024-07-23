@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    /* clear 'https://www.shutterstock.com/image-vector/blue-sky-clouds-anime-style-600nw-2157978867.jpg'
+        clear night  https://cdnb.artstation.com/p/assets/images/images/045/029/785/large/utopia-one-studio-20220109-193509.jpg
+        few cludes https://wallpapercave.com/wp/wp5865040.jpg
+         few cludes night  https://www.shutterstock.com/image-vector/clouds-sky-illuminated-by-moon-260nw-2271584533.jpg
+        scattered clouds https://img.freepik.com/premium-photo/clear-skies-with-few-scattered-clouds-background_987764-34545.jpg
+         scattered clouds night 
+         snow : https://wallpapercave.com/wp/wp5091768.jpg  
+         snow night : https://w0.peakpx.com/wallpaper/575/482/HD-wallpaper-winter-night-lights-winter-mountain-fantasy-moon-snow-white-blue-night.jpg
+        rain  : https://rare-gallery.com/mocahbig/5430596-anime-girls-school-student-anime-in-rain.jpg
+        rain night : https://wallpaperboat.com/wp-content/uploads/2020/05/anime-rain-01.jpg 
+        thunderstorm : https://cdn.britannica.com/57/150357-050-427E4C4F/lightning-discharge-field-cumulonimbus-cloud.jpg
+        thunderstorm night :  https://images.newscientist.com/wp-content/uploads/2024/02/06103007/SEI_189745988.jpg
+        snow rain : https://i0.wp.com/palawan-news.com/wp-content/uploads/2021/09/Weather-001.jpg?fit=1251%2C711&ssl=1
+        */
+    /* background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.container {
+    background: #171717;
+    color: #fff;
+    padding: 2rem;
+    width: 40%;
+    margin: 4rem auto;
+    border-radius: 10px;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background: #1e1e1e;
+    outline: none;
+    color: #fff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.weather__search {
+    position: relative;
+    width: 100%;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.weather__units {
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+.weather__units span {
+    cursor: pointer;
+}
+
+.weather__units span:first-child {
+    margin-right: 0.5rem;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: #1e1e1e;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather__icon img {
+    width: 100px;
+}
+
+.weather__temperature {
+    font-size: 1.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+}
+
+@media(max-width: 936px){
+    .container {
+        width: 90%;
+    }
+
+    .weather__header {
+        flex-direction: column;
+    }
+
+    .weather__units {
+        margin-top: 1rem;
+    }
+}
+.weather__units span:hover{
+    color: orangered;
+}
+
+@media(max-width: 400px){
+    .weather__info {
+        grid-template-columns: none;
+    }
+}
+.autocomplet{
+    list-style-type: none;
+    position: absolute;
+    /* background-color: red; */
+    padding-left: .7em;
+    padding-right: .7em;
+    max-height: 400px;
+    width: 100%;
+    background-color:  #1e1e1e;
+    overflow: scroll;
+
+}
+.autocomplet li {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    cursor: pointer;
+
+}
+.autocomplet li div{
+    padding: .6em;
+    font-size: 13px;
+    padding-bottom: .6em;
+    padding-top: .6em;
+    
+
+
+}
+.autocomplet li :hover{
+background-color: black;
+}
+.close {
+    width: 90%;
+}
+.close i {
+    padding-left: .5em;
+    cursor: pointer;
+}
